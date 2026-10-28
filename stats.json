@@ -1,0 +1,536 @@
+{
+  "source_pull_date": "2026-10-28",
+  "snapshot_date": "2026-10-28",
+  "ramps_dataset": "ODC_TRANS_CURBRAMPS_P (Denver Open Data, ArcGIS FeatureServer layer 228)",
+  "ramps_service_last_edit": "2024-07-12",
+  "pdi_dataset": "ODC_ADMN_PEDDEMANDINDEX_A (Denver Open Data, ArcGIS FeatureServer layer 442)",
+  "pdi_service_last_edit": "2026-08-07",
+  "total_ramps": 72770,
+  "ramps_with_geometry": 72770,
+  "ramps_without_geometry": 0,
+  "update_status_counter": {
+    "NC": 69986,
+    "A": 2784
+  },
+  "update_status_domain": {
+    "A": "Add",
+    "M": "Modify",
+    "NC": "No Change"
+  },
+  "createuser_counter": {
+    "Kucera": 72770
+  },
+  "comments_nonnull": 0,
+  "unique_id_present": 72770,
+  "unique_id_duplicates": 0,
+  "createdate_sentinels": {
+    "null": 0,
+    "sentinel_nonnull": 0,
+    "known": 72770
+  },
+  "createdate_year_counter": {
+    "2015": 54120,
+    "2016": 10,
+    "2017": 7391,
+    "2019": 5527,
+    "2021": 2854,
+    "2022": 84,
+    "2023": 2770,
+    "2024": 14
+  },
+  "createdate_min": "2015-07-08",
+  "createdate_max": "2024-02-05",
+  "createdate_note": "CREATEDATE is the delineation / record creation date from aerial imagery capture cycles, not a construction date; no ramp age is computed anywhere in this package.",
+  "pdi_zones": 479,
+  "pdi_score_counter": {
+    "4": 48,
+    "3": 48,
+    "9": 48,
+    "2": 48,
+    "5": 48,
+    "6": 48,
+    "7": 48,
+    "8": 48,
+    "1": 48,
+    "10": 47
+  },
+  "pdi_ranking_counter": {
+    "LOW": 192,
+    "HIGH": 191,
+    "MEDIUM": 96
+  },
+  "pdi_score_unknown": 0,
+  "pdi_geoid_null": 0,
+  "pdi_invalid_geometries": 1,
+  "pdi_total_area_sqmi": 154.39,
+  "pdi_shape_area_sum_sqmi": 154.39,
+  "pdi_ranking_bands": {
+    "LOW": "scores 1-4",
+    "MEDIUM": "scores 5-6",
+    "HIGH": "scores 7-10"
+  },
+  "join_ramps_to_pdi": {
+    "matched": 61983,
+    "unmatched": 10787,
+    "match_rate_pct": 85.2,
+    "multi_polygon_matches": 0,
+    "note": "Unmatched ramps fall outside every PDI polygon. The ramp layer was captured from regional DRCOG aerial imagery and extends beyond the City and County of Denver; the neighborhood join (below) places almost exactly the same set inside the city, so the unmatched set is ramps outside the city boundary, not geocoding failures inside it."
+  },
+  "join_ramps_to_neighborhoods": {
+    "matched": 61999,
+    "unmatched": 10771,
+    "match_rate_pct": 85.2,
+    "multi_polygon_matches": 0,
+    "outside_pdi_but_inside_neighborhood": 23,
+    "inside_pdi_but_outside_neighborhood": 7
+  },
+  "crash_source": {
+    "file": "stack/denver/layers/traffic_accidents_clean.parquet",
+    "rows": 106121,
+    "window": "2021-01-01 to 2026-10-15 (reported_date_local)",
+    "definition": "Warehouse panel built from Denver crash reports; reported date in America/Denver on or after 2021-01-01, deduplicated on offense_id (0 duplicates in the panel). 2026 is a partial year (through October 15).",
+    "with_coordinates": 101770,
+    "without_coordinates": 4351,
+    "pedestrian_involved_all": 2666
+  },
+  "join_crashes_to_pdi": {
+    "geocoded_crashes": 101770,
+    "matched": 100085,
+    "unmatched": 1685,
+    "match_rate_pct": 98.3,
+    "multi_polygon_matches": 0
+  },
+  "by_ranking": {
+    "LOW": {
+      "zones": 192,
+      "area_sqmi": 102.15,
+      "ramps": 30244,
+      "ramps_per_sqmi": 296.1,
+      "zero_ramp_zones": 2,
+      "median_zone_density_per_sqmi": 479.5,
+      "min_zone_density_per_sqmi": 0.0,
+      "max_zone_density_per_sqmi": 1687.0
+    },
+    "MEDIUM": {
+      "zones": 96,
+      "area_sqmi": 23.13,
+      "ramps": 15334,
+      "ramps_per_sqmi": 663.1,
+      "zero_ramp_zones": 0,
+      "median_zone_density_per_sqmi": 660.2,
+      "min_zone_density_per_sqmi": 71.9,
+      "max_zone_density_per_sqmi": 1487.2
+    },
+    "HIGH": {
+      "zones": 191,
+      "area_sqmi": 29.12,
+      "ramps": 16405,
+      "ramps_per_sqmi": 563.3,
+      "zero_ramp_zones": 0,
+      "median_zone_density_per_sqmi": 714.0,
+      "min_zone_density_per_sqmi": 51.8,
+      "max_zone_density_per_sqmi": 1910.9
+    }
+  },
+  "by_score": {
+    "1": {
+      "zones": 48,
+      "area_sqmi": 59.03,
+      "ramps": 7962,
+      "ramps_per_sqmi": 134.9,
+      "zero_ramp_zones": 2,
+      "median_zone_density_per_sqmi": 255.2,
+      "min_zone_density_per_sqmi": 0.0,
+      "max_zone_density_per_sqmi": 895.4,
+      "ranking": "LOW"
+    },
+    "2": {
+      "zones": 48,
+      "area_sqmi": 15.0,
+      "ramps": 7205,
+      "ramps_per_sqmi": 480.4,
+      "zero_ramp_zones": 0,
+      "median_zone_density_per_sqmi": 474.6,
+      "min_zone_density_per_sqmi": 51.4,
+      "max_zone_density_per_sqmi": 1377.1,
+      "ranking": "LOW"
+    },
+    "3": {
+      "zones": 48,
+      "area_sqmi": 12.45,
+      "ramps": 7300,
+      "ramps_per_sqmi": 586.5,
+      "zero_ramp_zones": 0,
+      "median_zone_density_per_sqmi": 529.8,
+      "min_zone_density_per_sqmi": 102.4,
+      "max_zone_density_per_sqmi": 1687.0,
+      "ranking": "LOW"
+    },
+    "4": {
+      "zones": 48,
+      "area_sqmi": 15.68,
+      "ramps": 7777,
+      "ramps_per_sqmi": 496.1,
+      "zero_ramp_zones": 0,
+      "median_zone_density_per_sqmi": 546.2,
+      "min_zone_density_per_sqmi": 43.0,
+      "max_zone_density_per_sqmi": 1278.1,
+      "ranking": "LOW"
+    },
+    "5": {
+      "zones": 48,
+      "area_sqmi": 11.36,
+      "ramps": 7715,
+      "ramps_per_sqmi": 679.2,
+      "zero_ramp_zones": 0,
+      "median_zone_density_per_sqmi": 653.5,
+      "min_zone_density_per_sqmi": 113.1,
+      "max_zone_density_per_sqmi": 1391.3,
+      "ranking": "MEDIUM"
+    },
+    "6": {
+      "zones": 48,
+      "area_sqmi": 11.77,
+      "ramps": 7619,
+      "ramps_per_sqmi": 647.5,
+      "zero_ramp_zones": 0,
+      "median_zone_density_per_sqmi": 663.6,
+      "min_zone_density_per_sqmi": 71.9,
+      "max_zone_density_per_sqmi": 1487.2,
+      "ranking": "MEDIUM"
+    },
+    "7": {
+      "zones": 48,
+      "area_sqmi": 12.6,
+      "ramps": 7590,
+      "ramps_per_sqmi": 602.3,
+      "zero_ramp_zones": 0,
+      "median_zone_density_per_sqmi": 610.7,
+      "min_zone_density_per_sqmi": 130.4,
+      "max_zone_density_per_sqmi": 1718.0,
+      "ranking": "HIGH"
+    },
+    "8": {
+      "zones": 48,
+      "area_sqmi": 9.96,
+      "ramps": 5306,
+      "ramps_per_sqmi": 532.6,
+      "zero_ramp_zones": 0,
+      "median_zone_density_per_sqmi": 780.4,
+      "min_zone_density_per_sqmi": 51.8,
+      "max_zone_density_per_sqmi": 1348.6,
+      "ranking": "HIGH"
+    },
+    "9": {
+      "zones": 48,
+      "area_sqmi": 5.92,
+      "ramps": 2962,
+      "ramps_per_sqmi": 499.9,
+      "zero_ramp_zones": 0,
+      "median_zone_density_per_sqmi": 707.7,
+      "min_zone_density_per_sqmi": 107.7,
+      "max_zone_density_per_sqmi": 1393.1,
+      "ranking": "HIGH"
+    },
+    "10": {
+      "zones": 47,
+      "area_sqmi": 0.63,
+      "ramps": 547,
+      "ramps_per_sqmi": 864.9,
+      "zero_ramp_zones": 0,
+      "median_zone_density_per_sqmi": 755.5,
+      "min_zone_density_per_sqmi": 322.8,
+      "max_zone_density_per_sqmi": 1910.9,
+      "ranking": "HIGH"
+    }
+  },
+  "high_band_detail": {
+    "zones": 191,
+    "zones_below_300_per_sqmi": 27,
+    "zones_below_citywide_median_zone_density": 72,
+    "citywide_median_zone_density_per_sqmi": 582.1,
+    "zero_ramp_zones": 0,
+    "lowest_density_zones": [
+      {
+        "objectid": 133,
+        "pdi_score": 8,
+        "ramps": 52,
+        "area_sqmi": 1.005,
+        "ramps_per_sqmi": 51.8
+      },
+      {
+        "objectid": 384,
+        "pdi_score": 8,
+        "ramps": 6,
+        "area_sqmi": 0.057,
+        "ramps_per_sqmi": 105.0
+      },
+      {
+        "objectid": 130,
+        "pdi_score": 9,
+        "ramps": 50,
+        "area_sqmi": 0.464,
+        "ramps_per_sqmi": 107.7
+      },
+      {
+        "objectid": 112,
+        "pdi_score": 8,
+        "ramps": 72,
+        "area_sqmi": 0.648,
+        "ramps_per_sqmi": 111.2
+      },
+      {
+        "objectid": 246,
+        "pdi_score": 9,
+        "ramps": 36,
+        "area_sqmi": 0.31,
+        "ramps_per_sqmi": 116.2
+      }
+    ],
+    "zones_below_300_area_sqmi": 8.95,
+    "zones_below_300_share_of_high_area_pct": 30.7
+  },
+  "low_excluding_zero_zones": {
+    "zones": 190,
+    "area_sqmi": 67.57,
+    "ramps": 30244,
+    "ramps_per_sqmi": 447.6,
+    "note": "Sensitivity: the LOW aggregate (296.1 per sq mi) is dragged by two zero-ramp score-1 zones covering 34.58 sq mi. Excluding them, LOW density is the figure in this block - still below MEDIUM and HIGH."
+  },
+  "score_8_10_detail": {
+    "zones": 143,
+    "area_sqmi": 16.52,
+    "ramps": 8815,
+    "ramps_per_sqmi": 533.6,
+    "zero_ramp_zones": 0,
+    "median_zone_density_per_sqmi": 755.5,
+    "min_zone_density_per_sqmi": 51.8,
+    "max_zone_density_per_sqmi": 1910.9
+  },
+  "zero_ramp_zones_all": [
+    {
+      "objectid": 475,
+      "pdi_score": 1,
+      "pdi_ranking": "LOW",
+      "area_sqmi": 30.36
+    },
+    {
+      "objectid": 476,
+      "pdi_score": 1,
+      "pdi_ranking": "LOW",
+      "area_sqmi": 4.22
+    }
+  ],
+  "placed_ramps": 61983,
+  "high_share": {
+    "ramps_in_high_zones": 16405,
+    "share_of_placed_ramps_pct": 26.5,
+    "high_area_sqmi": 29.12,
+    "share_of_pdi_area_pct": 18.9
+  },
+  "crashes_by_ranking": {
+    "LOW": {
+      "crashes": 40275,
+      "ped_crashes": 788,
+      "ped_share_of_crashes_pct": 2.0,
+      "ped_crashes_per_sqmi_window": 7.7,
+      "all_crashes_per_sqmi_window": 394.3,
+      "ped_ksi_crashes": 44,
+      "ped_ksi_share_pct": 5.6,
+      "ped_ksi_small_count_flag": false
+    },
+    "MEDIUM": {
+      "crashes": 20398,
+      "ped_crashes": 542,
+      "ped_share_of_crashes_pct": 2.7,
+      "ped_crashes_per_sqmi_window": 23.4,
+      "all_crashes_per_sqmi_window": 882.0,
+      "ped_ksi_crashes": 22,
+      "ped_ksi_share_pct": 4.1,
+      "ped_ksi_small_count_flag": true
+    },
+    "HIGH": {
+      "crashes": 39412,
+      "ped_crashes": 1228,
+      "ped_share_of_crashes_pct": 3.1,
+      "ped_crashes_per_sqmi_window": 42.2,
+      "all_crashes_per_sqmi_window": 1353.4,
+      "ped_ksi_crashes": 53,
+      "ped_ksi_share_pct": 4.3,
+      "ped_ksi_small_count_flag": false
+    }
+  },
+  "control_ped_vs_nonped_distribution": {
+    "ped_in_pdi": 2558,
+    "nonped_in_pdi": 97527,
+    "ped_high_share_pct": 48.0,
+    "nonped_high_share_pct": 39.2,
+    "ped_low_share_pct": 30.8,
+    "nonped_low_share_pct": 40.5
+  },
+  "ped_crashes": {
+    "panel_total": 2666,
+    "geocoded": 2602,
+    "in_pdi_zones": 2558,
+    "geocoded_without_coordinates_excluded": 64
+  },
+  "ped_share_by_score": {
+    "1": {
+      "crashes": 14628,
+      "ped_crashes": 211,
+      "ped_share_of_crashes_pct": 1.4
+    },
+    "2": {
+      "crashes": 7585,
+      "ped_crashes": 129,
+      "ped_share_of_crashes_pct": 1.7
+    },
+    "3": {
+      "crashes": 7936,
+      "ped_crashes": 217,
+      "ped_share_of_crashes_pct": 2.7
+    },
+    "4": {
+      "crashes": 10126,
+      "ped_crashes": 231,
+      "ped_share_of_crashes_pct": 2.3
+    },
+    "5": {
+      "crashes": 8861,
+      "ped_crashes": 264,
+      "ped_share_of_crashes_pct": 3.0
+    },
+    "6": {
+      "crashes": 11537,
+      "ped_crashes": 278,
+      "ped_share_of_crashes_pct": 2.4
+    },
+    "7": {
+      "crashes": 12396,
+      "ped_crashes": 316,
+      "ped_share_of_crashes_pct": 2.5
+    },
+    "8": {
+      "crashes": 15029,
+      "ped_crashes": 424,
+      "ped_share_of_crashes_pct": 2.8
+    },
+    "9": {
+      "crashes": 9514,
+      "ped_crashes": 378,
+      "ped_share_of_crashes_pct": 4.0
+    },
+    "10": {
+      "crashes": 2473,
+      "ped_crashes": 110,
+      "ped_share_of_crashes_pct": 4.4
+    }
+  },
+  "nearest_ramp_ped_crashes": {
+    "n": 2602,
+    "median_ft": 50.6,
+    "p90_ft": 273.4,
+    "within_50ft": 1282,
+    "within_50ft_pct": 49.3,
+    "within_150ft": 2098,
+    "within_150ft_pct": 80.6,
+    "within_300ft": 2402,
+    "within_300ft_pct": 92.3,
+    "note": "Distance from the crash point to the nearest ramp point in the full ramp layer (including ramps outside PDI zones). Proximity only: it measures neither crossing quality nor ramp condition or ADA accessibility.",
+    "within_150ft_by_ranking": {
+      "LOW": 73.2,
+      "MEDIUM": 78.2,
+      "HIGH": 86.2
+    }
+  },
+  "control_score10_zones": {
+    "zones": 47,
+    "area_sqmi": 0.63,
+    "ramps": 547,
+    "ramps_per_sqmi": 864.9,
+    "expectation": "The 47 score-10 zones are the smallest and densest-demand zones (downtown core). If the join and area math are sound, they should show the highest ramp density of any score.",
+    "result": "Highest of the 10 scores (see by_score)."
+  },
+  "neighborhoods": {
+    "count": 78,
+    "ramps_placed": 61999,
+    "neighborhoods_with_zero_ramps": 0,
+    "median_density_per_sqmi": 556.2,
+    "top_by_ramps": [
+      [
+        "Central Park",
+        5814
+      ],
+      [
+        "Gateway - Green Valley Ranch",
+        4589
+      ],
+      [
+        "Montbello",
+        2056
+      ],
+      [
+        "Lowry Field",
+        1618
+      ],
+      [
+        "Five Points",
+        1591
+      ]
+    ],
+    "top_by_density": [
+      [
+        "Whittier",
+        1207.6,
+        680
+      ],
+      [
+        "City Park West",
+        1192.6,
+        638
+      ],
+      [
+        "North Capitol Hill",
+        1100.5,
+        388
+      ],
+      [
+        "Cole",
+        1099.4,
+        563
+      ],
+      [
+        "Congress Park",
+        1069.7,
+        1101
+      ]
+    ],
+    "bottom_by_density_nonzero_area": [
+      [
+        "DIA",
+        16.5,
+        699
+      ],
+      [
+        "Kennedy",
+        47.0,
+        33
+      ],
+      [
+        "Windsor",
+        128.0,
+        219
+      ],
+      [
+        "Marston",
+        206.3,
+        654
+      ],
+      [
+        "Fort Logan",
+        208.2,
+        552
+      ]
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "pull_date": "2026-10-28",
+  "ramps": {
+    "dataset": "ODC_TRANS_CURBRAMPS_P",
+    "layer_id": 228,
+    "service_url": "https://services1.arcgis.com/zdB7qR0BtYrg0Xpl/arcgis/rest/services/ODC_TRANS_CURBRAMPS_P/FeatureServer/228",
+    "total_records_server": 72770,
+    "pulled_records": 72770,
+    "service_last_edit_ms": 1720806330874,
+    "update_status_counter_local": [
+      [
+        "NC",
+        69986
+      ],
+      [
+        "A",
+        2784
+      ]
+    ]
+  },
+  "pdi": {
+    "dataset": "ODC_ADMN_PEDDEMANDINDEX_A",
+    "layer_id": 442,
+    "service_url": "https://services1.arcgis.com/zdB7qR0BtYrg0Xpl/arcgis/rest/services/ODC_ADMN_PEDDEMANDINDEX_A/FeatureServer/442",
+    "total_records_server": 479,
+    "pulled_records": 479,
+    "service_last_edit_ms": 1786096866432,
+    "pdi_score_counter_local": [
+      [
+        "4",
+        48
+      ],
+      [
+        "3",
+        48
+      ],
+      [
+        "9",
+        48
+      ],
+      [
+        "2",
+        48
+      ],
+      [
+        "5",
+        48
+      ],
+      [
+        "6",
+        48
+      ],
+      [
+        "7",
+        48
+      ],
+      [
+        "8",
+        48
+      ],
+      [
+        "1",
+        48
+      ],
+      [
+        "10",
+        47
+      ]
+    ],
+    "pdi_ranking_counter_local": [
+      [
+        "LOW",
+        192
+      ],
+      [
+        "HIGH",
+        191
+      ],
+      [
+        "MEDIUM",
+        96
+      ]
+    ]
+  }
+}

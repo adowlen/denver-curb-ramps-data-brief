@@ -1,0 +1,30 @@
+COUNTER UPDATE_STATUS: 2 unique values, sum=72770 == 72770; values={'NC': 69986, 'A': 2784} PASS
+COUNTER CREATEUSER: 1 unique values, sum=72770 == 72770; values={'Kucera': 72770} PASS
+COUNTER COMMENTS: values={'NULL': 72770} (field entirely unpopulated) PASS
+COUNTER PDI_Score: 10 unique values, sum=479 == 479; values={'1': 48, '10': 47, '2': 48, '3': 48, '4': 48, '5': 48, '6': 48, '7': 48, '8': 48, '9': 48} PASS
+COUNTER PDI_Ranking: values={'LOW': 192, 'HIGH': 191, 'MEDIUM': 96} PASS
+CROSS PDI_Score x PDI_Ranking: every zone follows LOW=1-4, MEDIUM=5-6, HIGH=7-10; pairs=[(1, 'LOW'), (2, 'LOW'), (3, 'LOW'), (4, 'LOW'), (5, 'MEDIUM'), (6, 'MEDIUM'), (7, 'HIGH'), (8, 'HIGH'), (9, 'HIGH'), (10, 'HIGH')] PASS
+SERVER vs LOCAL UPDATE_STATUS: server={'NC': 69986, 'A': 2784} PASS
+SERVER vs LOCAL PDI_Score: server zones sum=479 PASS
+SENTINEL CREATEDATE: null=0, sentinel_nonnull=0, known=72770; unknown excluded from every date denominator; CREATEDATE is never used as ramp age in this package PASS
+  POLARITY CREATEDATE included sample (kept, date in 1950..2024-07-12): [[65616, 1707091200000], [65617, 1707091200000], [65618, 1636934400000]]
+  POLARITY CREATEDATE excluded sample (null/sentinel -> unknown): [] (empty: no record is excluded - every CREATEDATE is a valid delineation date)
+SENTINEL PDI_Score: unknown scores=0; all 479 zones carry a score in 1..10, so band denominators are the full zone counts PASS
+DENOMINATOR ramps placed + unplaced: 61983 + 10787 = 72770; the not-placed share (14.8%) is printed alongside the placed share and the two sum to the whole PASS
+DENOMINATOR panel closure: taz_panel rows=479, ramps sum=61983 == placed 61983 PASS
+PARTITION by_score and by_ranking: by_score sum=61983, by_ranking sum=61983, placed=61983 PASS
+PARTITION crashes by ranking: crashes sum=100085 == matched 100085; ped sum=2558 == in-PDI ped 2558 PASS
+UNITS ramp density: every density divides ramps by square miles of the SAME zones; HIGH recomputed from the panel's 4-decimal areas (29.12 sq mi) is 563.3 vs printed 563.3 (the builder divides by unrounded areas; stats.json prints areas rounded to 2 decimals, so a recomputation from the rounded area alone can differ by 0.1) PASS
+UNITS crash shares: pedestrian shares divide pedestrian crashes by crashes in the same band; KSI shares divide KSI pedestrian crashes by pedestrian crashes in the same band; LOW ped share recomputed 2.0, KSI share recomputed 5.6; no persons-over-crashes or cross-unit rate anywhere PASS
+SCALE PDI area two ways: projected-from-4326 total 154.39 sq mi vs layer Shape__Area sum 154.39 sq mi over 479 zone polygons (physical scale printed alongside polygon counts) PASS
+JOIN match rates recorded: ramps->PDI 61983/72770 (85.2% - below the 95% line, flagged in the brief and reviewer notes with its systematic explanation: the ramp layer extends beyond the city); ramps->neighborhoods 61999/72770; crashes->PDI 100085/101770 (98.3%); multi-polygon matches 0 in all joins PASS
+CONTROL two-polygon-set agreement: PDI and neighborhood joins disagree on 30 of 72770 ramps (23 outside PDI but inside a neighborhood, 7 the reverse) - two independent polygon sets place the same ramps inside the city PASS
+CONTROL score-10 density: score-10 zones (47 zones, 0.63 sq mi, the downtown demand core) show 864.9 ramps per sq mi, the highest of any score - the join and area math place the densest ramp concentration where the densest street grid is expected PASS
+CONTROL ped vs non-ped distribution: pedestrian crashes fall in HIGH zones at 48.0% vs 39.2% for non-pedestrian crashes (the comparison group) - the demand index separates pedestrian crash geography from general crash geography in the expected direction PASS
+SENSITIVITY invalid PDI geometry: zone OBJECTID 258 is invalid as stored; its own area as stored 0.1144 sq mi vs make_valid 0.1110 sq mi (difference 2.96% of that one small zone); repairing it moves the HIGH band density from 563.35 to 563.41 per sq mi (under 0.1), so no headline figure changes; its panel ramp count (19) is retained and the defect is flagged in reviewer notes PASS
+SMALL NUMBERS: KSI pedestrian counts by band: LOW 44, MEDIUM 22 (under 30, flagged in stats and in the brief), HIGH 53; every percentage in the brief prints its underlying count PASS
+SERVER fresh live recounts: ramps live 72770 == local 72770; PDI live 479 == local 479 PASS
+SYNC README dependencies: code imports (third-party): ['matplotlib', 'numpy', 'pandas', 'pyproj', 'shapely']; README dependency line: Python standard library; matplotlib; numpy; pandas; pyproj; shapely. PASS
+SYNC brief numbers present in stats: headline figures cross-checked against stats.json; missing from brief: [] PASS
+VOICE no en/em dashes in brief: published text uses plain hyphens only PASS
+AUDIT PASSED

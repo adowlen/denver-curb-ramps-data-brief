@@ -1,0 +1,88 @@
+{
+  "ramps": {
+    "layer_id": 228,
+    "service_last_edit_ms": 1720806330874,
+    "service_description": "Sidewalk ramps delineated from 2022 aerial imagery.",
+    "total_records": 72770,
+    "pulled_records": 72770,
+    "update_status_counter_server": [
+      [
+        "NC",
+        69986
+      ],
+      [
+        "A",
+        2784
+      ]
+    ],
+    "createuser_counter_server": [
+      [
+        "Kucera",
+        72770
+      ]
+    ]
+  },
+  "pdi": {
+    "layer_id": 442,
+    "service_last_edit_ms": 1786096866432,
+    "service_description": "This dataset estimates the demand for walking in different areas of the City and County of Denver based on population and employment density.",
+    "total_records": 479,
+    "pulled_records": 479,
+    "pdi_score_counter_server": [
+      [
+        1,
+        48
+      ],
+      [
+        2,
+        48
+      ],
+      [
+        3,
+        48
+      ],
+      [
+        4,
+        48
+      ],
+      [
+        5,
+        48
+      ],
+      [
+        6,
+        48
+      ],
+      [
+        7,
+        48
+      ],
+      [
+        8,
+        48
+      ],
+      [
+        9,
+        48
+      ],
+      [
+        10,
+        47
+      ]
+    ],
+    "pdi_ranking_counter_server": [
+      [
+        "LOW",
+        192
+      ],
+      [
+        "HIGH",
+        191
+      ],
+      [
+        "MEDIUM",
+        96
+      ]
+    ]
+  }
+}

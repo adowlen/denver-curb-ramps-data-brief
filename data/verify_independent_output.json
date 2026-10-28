@@ -1,0 +1,275 @@
+{
+  "checks_vs_builder": {
+    "total_ramps": true,
+    "update_status_counter": true,
+    "createuser_counter": true,
+    "comments_nonnull": true,
+    "unique_id_duplicates": true,
+    "createdate_year_counter": true,
+    "createdate_known": true,
+    "pdi_zones": true,
+    "pdi_ranking_counter": true,
+    "pdi_score_counter": true,
+    "area_sqmi_LOW": true,
+    "area_sqmi_MEDIUM": true,
+    "area_sqmi_HIGH": true,
+    "pdi_total_area_sqmi": true,
+    "placed_ramps": true,
+    "ramps_LOW": true,
+    "ramps_per_sqmi_LOW": true,
+    "ramps_MEDIUM": true,
+    "ramps_per_sqmi_MEDIUM": true,
+    "ramps_HIGH": true,
+    "ramps_per_sqmi_HIGH": true,
+    "zero_ramp_zones_total": true,
+    "high_zero_ramp_zones": true,
+    "crash_partition_crashes": true,
+    "crash_partition_ped": true,
+    "ped_share_recompute_LOW": true,
+    "ped_share_recompute_MEDIUM": true,
+    "ped_share_recompute_HIGH": true,
+    "nearest_within150_pct_recompute": true,
+    "live_total_ramps": true,
+    "live_total_pdi": true,
+    "live_update_status": true,
+    "live_pdi_ranking": true
+  },
+  "total_ramps": {
+    "builder": 72770,
+    "independent": 72770,
+    "match": true
+  },
+  "update_status_counter": {
+    "builder": {
+      "NC": 69986,
+      "A": 2784
+    },
+    "independent": {
+      "NC": 69986,
+      "A": 2784
+    },
+    "match": true
+  },
+  "createuser_counter": {
+    "builder": {
+      "Kucera": 72770
+    },
+    "independent": {
+      "Kucera": 72770
+    },
+    "match": true
+  },
+  "comments_nonnull": {
+    "builder": 0,
+    "independent": 0,
+    "match": true
+  },
+  "unique_id_duplicates": {
+    "builder": 0,
+    "independent": 0,
+    "match": true
+  },
+  "createdate_year_counter": {
+    "builder": {
+      "2015": 54120,
+      "2016": 10,
+      "2017": 7391,
+      "2019": 5527,
+      "2021": 2854,
+      "2022": 84,
+      "2023": 2770,
+      "2024": 14
+    },
+    "independent": {
+      "2015": 54120,
+      "2016": 10,
+      "2017": 7391,
+      "2019": 5527,
+      "2021": 2854,
+      "2022": 84,
+      "2023": 2770,
+      "2024": 14
+    },
+    "match": true
+  },
+  "createdate_known": {
+    "builder": 72770,
+    "independent": 72770,
+    "match": true
+  },
+  "pdi_zones": {
+    "builder": 479,
+    "independent": 479,
+    "match": true
+  },
+  "pdi_ranking_counter": {
+    "builder": {
+      "LOW": 192,
+      "HIGH": 191,
+      "MEDIUM": 96
+    },
+    "independent": {
+      "LOW": 192,
+      "HIGH": 191,
+      "MEDIUM": 96
+    },
+    "match": true
+  },
+  "pdi_score_counter": {
+    "builder": {
+      "4": 48,
+      "3": 48,
+      "9": 48,
+      "2": 48,
+      "5": 48,
+      "6": 48,
+      "7": 48,
+      "8": 48,
+      "1": 48,
+      "10": 47
+    },
+    "independent": {
+      "4": 48,
+      "3": 48,
+      "9": 48,
+      "2": 48,
+      "5": 48,
+      "6": 48,
+      "7": 48,
+      "8": 48,
+      "1": 48,
+      "10": 47
+    },
+    "match": true
+  },
+  "area_sqmi_LOW": {
+    "builder": 102.15,
+    "independent": 102.15,
+    "match": true
+  },
+  "area_sqmi_MEDIUM": {
+    "builder": 23.13,
+    "independent": 23.13,
+    "match": true
+  },
+  "area_sqmi_HIGH": {
+    "builder": 29.12,
+    "independent": 29.12,
+    "match": true
+  },
+  "pdi_total_area_sqmi": {
+    "builder": 154.39,
+    "independent": 154.39,
+    "match": true
+  },
+  "placed_ramps": {
+    "builder": 61983,
+    "independent": 61983,
+    "match": true
+  },
+  "ramps_LOW": {
+    "builder": 30244,
+    "independent": 30244,
+    "match": true
+  },
+  "ramps_per_sqmi_LOW": {
+    "builder": 296.1,
+    "independent": 296.1,
+    "match": true
+  },
+  "ramps_MEDIUM": {
+    "builder": 15334,
+    "independent": 15334,
+    "match": true
+  },
+  "ramps_per_sqmi_MEDIUM": {
+    "builder": 663.1,
+    "independent": 662.9,
+    "match": true
+  },
+  "ramps_HIGH": {
+    "builder": 16405,
+    "independent": 16405,
+    "match": true
+  },
+  "ramps_per_sqmi_HIGH": {
+    "builder": 563.3,
+    "independent": 563.4,
+    "match": true
+  },
+  "zero_ramp_zones_total": {
+    "builder": 2,
+    "independent": 2,
+    "match": true
+  },
+  "high_zero_ramp_zones": {
+    "builder": 0,
+    "independent": 0,
+    "match": true
+  },
+  "crash_partition_crashes": {
+    "builder": 100085,
+    "independent": 100085,
+    "match": true
+  },
+  "crash_partition_ped": {
+    "builder": 2558,
+    "independent": 2558,
+    "match": true
+  },
+  "ped_share_recompute_LOW": {
+    "builder": 2.0,
+    "independent": 2.0,
+    "match": true
+  },
+  "ped_share_recompute_MEDIUM": {
+    "builder": 2.7,
+    "independent": 2.7,
+    "match": true
+  },
+  "ped_share_recompute_HIGH": {
+    "builder": 3.1,
+    "independent": 3.1,
+    "match": true
+  },
+  "nearest_within150_pct_recompute": {
+    "builder": 80.6,
+    "independent": 80.6,
+    "match": true
+  },
+  "live_total_ramps": {
+    "builder": 72770,
+    "independent": 72770,
+    "match": true
+  },
+  "live_total_pdi": {
+    "builder": 479,
+    "independent": 479,
+    "match": true
+  },
+  "live_update_status": {
+    "builder": {
+      "NC": 69986,
+      "A": 2784
+    },
+    "independent": {
+      "A": 2784,
+      "NC": 69986
+    },
+    "match": true
+  },
+  "live_pdi_ranking": {
+    "builder": {
+      "LOW": 192,
+      "HIGH": 191,
+      "MEDIUM": 96
+    },
+    "independent": {
+      "HIGH": 191,
+      "LOW": 192,
+      "MEDIUM": 96
+    },
+    "match": true
+  },
+  "all_match": true
+}
